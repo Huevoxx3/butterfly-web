@@ -1,0 +1,101 @@
+/*==================================
+NUESTROS FAVORITOS
+==================================*/
+
+#destacados{
+
+    background:#101010;
+
+}
+
+.highlights{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.highlight{
+
+    position:relative;
+
+    height:340px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.highlight img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.highlight:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.highlight::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.75)
+
+    );
+
+    z-index:1;
+
+}
+
+.highlight-content{
+
+    position:absolute;
+
+    left:35px;
+
+    bottom:35px;
+
+    z-index:2;
+
+}
+
+.highlight-content h3{
+
+    color:white;
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+.highlight-content p{
+
+    color:#ddd;
+
+}

@@ -1,0 +1,183 @@
+/* ==========================================================
+   HEADER
+========================================================== */
+
+#header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    transition:.35s ease;
+
+    padding:18px 0;
+
+}
+
+/* Estado al hacer scroll */
+
+#header.scrolled{
+
+    background:rgba(15,15,15,.82);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+
+}
+
+/* ========================================= */
+
+.navbar{
+
+    display:grid;
+
+    grid-template-columns:180px 1fr 180px;
+
+    align-items:center;
+
+}
+
+/* ========================================= */
+
+.logo-link{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo-nav{
+
+    width:90px;
+
+    transition:.3s;
+
+}
+
+.logo-nav:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ========================================= */
+
+.nav-menu{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+}
+
+.nav-menu li{
+
+    position:relative;
+
+}
+
+.nav-menu a{
+
+    color:var(--color-white);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+    transition:.30s;
+
+}
+
+/* Línea dorada */
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-primary);
+
+    transition:.30s;
+
+}
+
+.nav-menu a:hover{
+
+    color:var(--color-primary);
+
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ========================================= */
+
+.btn-header{
+
+    justify-self:end;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:150px;
+
+    height:48px;
+
+    border-radius:50px;
+
+    border:2px solid var(--color-primary);
+
+    color:var(--color-white);
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.btn-header:hover{
+
+    background:var(--color-primary);
+
+    color:#111;
+
+}
+
+/* ========================================= */
+/* Menú móvil (lo activaremos después) */
+/* ========================================= */
+
+.menu-toggle{
+
+    display:none;
+
+}

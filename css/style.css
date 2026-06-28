@@ -1,0 +1,416 @@
+/* ==========================================================
+   BUTTERFLY ESPACIO CERVECERO
+   style.css
+   Estilos globales
+========================================================== */
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root{
+
+    /* Colores */
+
+    --color-primary:#D4A017;
+    --color-secondary:#8B5E3C;
+
+    --color-bg:#151515;
+    --color-surface:#202020;
+
+    --color-white:#F5F5F5;
+    --color-text:#EAEAEA;
+    --color-text-light:#BFBFBF;
+
+    /* Bordes */
+
+    --radius:12px;
+
+    /* Sombras */
+
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+
+    /* Transiciones */
+
+    --transition:.30s ease;
+
+    /* Contenedor */
+
+    --container-width:1300px;
+
+}
+
+/* ==========================================================
+   HTML
+========================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body{
+
+    background:var(--color-bg);
+
+    color:var(--color-text);
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================================
+   TIPOGRAFÍA
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5{
+
+    font-family:'Oswald',sans-serif;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+p{
+
+    color:var(--color-text-light);
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   IMÁGENES
+========================================================== */
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================================================
+   LISTAS
+========================================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==========================================================
+   CONTENEDOR
+========================================================== */
+
+.container{
+
+    width:min(92%, var(--container-width));
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   SECCIONES
+========================================================== */
+
+section{
+
+    padding:100px 0;
+
+}
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+.btn-primary,
+.btn-secondary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:190px;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--color-primary);
+
+    color:#111;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-secondary{
+
+    border:2px solid var(--color-white);
+
+    color:var(--color-white);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--color-white);
+
+    color:#111;
+
+}
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:clamp(2.2rem,5vw,4rem);
+
+    margin-bottom:60px;
+
+}
+
+/* ==========================================================
+   UTILIDADES
+========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:1rem;
+
+}
+
+.mt-2{
+
+    margin-top:2rem;
+
+}
+
+.mt-3{
+
+    margin-top:3rem;
+
+}
+/*====================================
+VISÍTANOS
+====================================*/
+
+#visitanos{
+
+    padding:120px 0;
+
+    background:#181818;
+
+}
+
+.visitanos-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.visitanos-title span{
+
+    color:var(--color-principal);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.visitanos-title h2{
+
+    font-size:3.5rem;
+
+    margin:20px 0;
+
+}
+
+.visitanos-title p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+}
+
+.visitanos-grid{
+
+    display:grid;
+
+    grid-template-columns:1.3fr 1fr;
+
+    gap:45px;
+
+    align-items:start;
+
+}
+
+.mapa iframe{
+
+    width:100%;
+
+    height:500px;
+
+    border:none;
+
+    border-radius:22px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.info-card{
+
+    background:#222;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    transition:.3s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.info-card h3{
+
+    margin-bottom:12px;
+
+}
+
+.info-card p,
+.info-card a{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+}
+
+.info-card ul{
+
+    list-style:none;
+
+}
+
+.info-card li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:10px 0;
+
+}
+
+.visitanos-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:70px;
+
+    flex-wrap:wrap;
+
+}
+/*======================================
+FOOTER
+======================================*/
+

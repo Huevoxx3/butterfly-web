@@ -1,0 +1,467 @@
+/*==========================================
+GALERÍA
+==========================================*/
+
+#gallery{
+
+    padding:120px 0;
+
+    background:#151515;
+
+}
+
+.gallery-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.gallery-header span{
+
+    color:var(--color-principal);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.gallery-header h2{
+
+    margin:20px 0;
+
+    font-size:3.5rem;
+
+    color:white;
+
+}
+
+.gallery-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+
+}
+
+/*==========================================
+SLIDER
+==========================================*/
+
+.gallery-slider{
+
+    width:100%;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.40);
+
+}
+
+.gallery-slider img{
+
+    width:100%;
+
+    height:650px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*==========================================
+MINIATURAS
+==========================================*/
+
+.gallery-thumbs{
+
+    margin-top:20px;
+
+}
+
+.gallery-thumbs .swiper-slide{
+
+    opacity:.45;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.gallery-thumbs .swiper-slide-thumb-active{
+
+    opacity:1;
+
+}
+
+.gallery-thumbs img{
+
+    width:100%;
+
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+/*==========================================
+FLECHAS
+==========================================*/
+
+.swiper-button-next,
+.swiper-button-prev{
+
+    color:white;
+
+    background:rgba(0,0,0,.45);
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/*==========================================
+PAGINACIÓN
+==========================================*/
+
+.swiper-pagination-bullet{
+
+    background:white;
+
+    opacity:.5;
+
+}
+
+.swiper-pagination-bullet-active{
+
+    background:var(--color-principal);
+
+    opacity:1;
+
+}
+
+/*==========================================
+BOTÓN
+==========================================*/
+
+/*==========================================
+BOTÓN GALERÍA PREMIUM
+==========================================*/
+
+.gallery-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:55px;
+
+}
+
+.gallery-button{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:transparent;
+
+    border:1px solid rgba(212,160,23,.45);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+}
+
+.gallery-button:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--color-principal);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+
+}
+
+.gallery-icon{
+
+    font-size:2rem;
+
+}
+
+.gallery-title{
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+}
+
+.gallery-button small{
+
+    color:#a5a5a5;
+
+    font-size:.95rem;
+
+}
+
+/*==========================================
+RESPONSIVE
+==========================================*/
+
+@media(max-width:900px){
+
+.gallery-slider img{
+
+    height:420px;
+
+}
+
+.gallery-thumbs img{
+
+    height:75px;
+
+}
+
+}
+/*==========================================
+MODAL GALERÍA
+==========================================*/
+
+.gallery-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+    overflow-y:auto;
+
+    padding:60px;
+
+}
+
+.gallery-modal.active{
+
+    display:block;
+
+}
+
+.gallery-modal-content{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.gallery-modal h2{
+
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    font-size:3rem;
+
+}
+
+.gallery-close{
+
+    position:fixed;
+
+    top:30px;
+
+    right:40px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.04);
+
+}
+/*==========================================
+VISOR
+==========================================*/
+
+.gallery-viewer{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.96);
+
+    z-index:10000;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.gallery-viewer.active{
+
+    display:flex;
+
+}
+
+.gallery-viewer img{
+
+    max-width:90vw;
+
+    max-height:85vh;
+
+    border-radius:12px;
+
+}
+
+.viewer-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+}
+
+.viewer-nav{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:rgba(255,255,255,.15);
+
+    border:none;
+
+    color:white;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+}
+
+.viewer-nav.prev{
+
+    left:30px;
+
+}
+
+.viewer-nav.next{
+
+    right:30px;
+
+}
