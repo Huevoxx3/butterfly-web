@@ -125,3 +125,29 @@ botones.forEach(boton=>{
     });
 
 });
+
+// ============================================
+// MENÚ RESPONSIVE
+// ============================================
+
+const menuToggle = document.getElementById("menu-toggle");
+
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+});
+
+// Cerrar al pulsar un enlace
+
+document.querySelectorAll(".nav-menu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        navMenu.classList.remove("active");
+
+    });
+
+});

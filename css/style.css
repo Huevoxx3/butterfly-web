@@ -414,3 +414,158 @@ VISÍTANOS
 FOOTER
 ======================================*/
 
+/*==========================================
+PROMOCIONES
+==========================================*/
+
+#promociones{
+
+    padding:35px 0;
+
+    background:#181818;
+
+    border-top:1px solid rgba(212,160,23,.15);
+
+    border-bottom:1px solid rgba(212,160,23,.15);
+
+}
+
+.promo-header{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.promo-header span{
+
+    color:var(--color-principal);
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+.promo-content{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    font-size:1.05rem;
+
+    flex-wrap:wrap;
+
+}
+
+.promo-icon{
+
+    font-size:1.4rem;
+
+}
+
+.promo-text{
+
+    color:#d7d7d7;
+
+}
+.btn-primary i{
+
+    margin-right:8px;
+
+}
+/*==========================================
+BOTONES DE CONTACTO
+==========================================*/
+
+.contact-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.contact-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    width:210px;
+
+    height:65px;
+
+    text-decoration:none;
+
+    background:#1f1f1f;
+
+    border:1px solid rgba(212,160,23,.18);
+
+    border-radius:18px;
+
+    color:white;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.contact-btn i{
+
+    font-size:24px;
+
+    color:#d4a017;
+
+    transition:.35s;
+
+}
+
+.contact-btn span{
+
+    font-size:1rem;
+
+    font-weight:600;
+
+}
+
+.contact-btn:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#d4a017;
+
+    background:#282828;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.35);
+
+}
+
+.contact-btn:hover i{
+
+    transform:scale(1.15);
+
+}
